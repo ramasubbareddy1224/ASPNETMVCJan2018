@@ -132,6 +132,7 @@
     <Content Include="Content\flower.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="formget.html" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="learnhtml.html" />
