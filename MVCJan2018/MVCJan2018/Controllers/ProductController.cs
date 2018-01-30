@@ -13,9 +13,20 @@ namespace MVCJan2018.Controllers
             return "Pragim Tech";
         }
 
-        public string ShowName()
+        public string ShowName(string id)
         {
-            return "This is Rama";
+            // string id = RouteData.Values["id"].ToString();
+            return "This is Rama with id:" + id;
         }
+        public ActionResult Info()
+        {
+            return View("info1");
+        }
+
+        public ActionResult Content()
+        {
+            return Content("This is content type");
+        }
+         
     }
 }

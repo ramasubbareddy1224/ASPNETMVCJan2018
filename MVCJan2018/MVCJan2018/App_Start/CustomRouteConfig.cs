@@ -11,10 +11,10 @@ namespace MVCJan2018
     {
         public static void LoadRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("product/");
+          //  routes.IgnoreRoute("product/showname");
             routes.MapRoute(
                 "firstroute",
-                "{controller}/{action}/{id}/{*id1}",                
+                "{controller}/{action}/{id}",                
                 new { id=UrlParameter.Optional ,action ="ShowName",controller="product" }
                 //,new { id="^r.*" }
                 );
