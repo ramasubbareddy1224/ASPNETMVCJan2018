@@ -168,7 +168,9 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Product\Info1.cshtml" />
+    <Content Include="Views\Product\Info.cshtml" />
+    <Content Include="Views\Product\Info2.cshtml" />
+    <Content Include="Views\Product\RazorView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

@@ -1,0 +1,50 @@
+﻿@{ string title = "Razor View"; }
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="HTML Tutorials">
+    <meta name="keywords" content="HTML,CSS">
+    <meta name="author" content="Rama">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <noscript> JavaScript is not supported </noscript>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    @{
+        string name = "pragim";
+        int id = 100;
+        int newid = id + 100;
+        bool showData = false;
+        string[] names = { "rama", "siva", "krishna", "vishnu" };
+    }
+
+    <p>Institute name:@name and id:@newid</p>
+
+    @if (showData)
+    {
+        <p>Condition is true</p>
+    }
+    else
+    {
+        <p>Condition is false @@</p>
+    }
+
+    <p>Incremented Id value@(newid + 100)</p>
+
+
+    @*This is foreach loop to print names
+        second comment
+    *@
+    <ul>
+        @foreach (var item in names)
+        {
+            <li>@item</li>
+        }
+    </ul>
+
+
+</body>
+</html>

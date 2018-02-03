@@ -31,6 +31,17 @@
             <td>$300</td>
         </tr>
     </table>
+    <p>My Name Is :@ViewData["Name"]</p>
+    <p>Email : @ViewData["Email"]</p>
+    <p>Day : @(((DateTime)ViewData["Date"]).DayOfWeek)  </p>
+
+    <p>My Name Is :@ViewBag.VBName</p>
+    <p>Email : @ViewBag.VBEmail</p>
+    <p>Day : @ViewBag.VBDate.DayOfWeek </p>
+
+    @*<p>Temp Info: @TempData["TDName"]</p>*@
+
+    @Html.ActionLink("Goto Info2", "Info2")
 
 </body>
 </html>
