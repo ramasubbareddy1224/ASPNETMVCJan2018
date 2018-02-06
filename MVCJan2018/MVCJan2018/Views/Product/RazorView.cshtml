@@ -1,4 +1,6 @@
-﻿@{ string title = "Razor View"; }
+﻿@using MVCJan2018.Infrastrcture
+
+@{ string title = "Razor View"; }
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,6 +46,32 @@
             <li>@item</li>
         }
     </ul>
+    <h2>HTML Helpers</h2>
+    <input type="text" id="txtid" value="rama" />
+    @Html.TextBox("txtrazor", "rama") <br />
+    @Html.TextArea("txtrazorarea") <br />
+    @Html.Hidden("hdnname", "secret code") <br />
+
+    @Html.RadioButton("rbstatus", "Yes") Yes
+    @Html.RadioButton("rbstatus", "No") No
+
+    @Html.ActionLink("Goto Info", "Info", "Product") <br />
+
+    @Html.LabelWithBoldHTML("Pragim Technologies") <br />
+
+    @CustomHTMLHelper.LabelWithBold("Pragim Technologies")<br />
+    @CustomHTMLHelper.LabelWithBold("Hyderabad")<br />
+
+    @LabelWithBoldHelper("Inline Helper")
+
+    @*<label><strong>Pragim Technologies</strong></label> <br />
+        <label><strong>Hyderabad</strong></label><br />
+        <label><strong>Telengana</strong></label>*@
+
+    @helper LabelWithBoldHelper(string content)
+    {
+    <label><strong>@content</strong></label>
+}
 
 
 </body>
