@@ -45,14 +45,27 @@ namespace MVCJan2018.Controllers
             return View();
         }
 
+        [NonAction]
         public ActionResult Content()
         {
             return Content("This is content type");
         }
+
+       
         public ActionResult RazorView()
         {
             return View();
         }
+
+        [ChildActionOnly]
+        public string GetInternalConfig()
+        {
+            return "XSDSDS-WQWQQ";
+        }
+        //public ActionResult ProductPartial()
+        //{
+        //    return PartialView();
+        //}
 
     }
 }

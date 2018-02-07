@@ -172,6 +172,8 @@
     <Content Include="Views\Product\Info.cshtml" />
     <Content Include="Views\Product\Info2.cshtml" />
     <Content Include="Views\Product\RazorView.cshtml" />
+    <Content Include="Views\Shared\_ProductPartial.cshtml" />
+    <Content Include="Views\Shared\_PartailData.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

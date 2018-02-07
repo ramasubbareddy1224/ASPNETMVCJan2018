@@ -43,6 +43,17 @@
 
     @Html.ActionLink("Goto Info2", "Info2")
 
+    <h3>Partail View</h3>
+    @Html.Partial("_ProductPartial")
+
+    @{ Html.RenderPartial("_ProductPartial"); }
+
+    <h3>Calling Content Action Method</h3>
+    @Html.Action("RazorView", "Product")
+    @{ Html.RenderAction("RazorView", "Product");}
+
+
+
 </body>
 </html>
 
