@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCJan2018.Infrastrcture;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,6 +7,7 @@ using System.Web.Mvc;
 
 namespace MVCJan2018.Controllers
 {
+   
     public class ProductController : Controller
     {
         public string Print()
@@ -18,8 +20,12 @@ namespace MVCJan2018.Controllers
             // string id = RouteData.Values["id"].ToString();
             return "This is Rama with id:" + id;
         }
+        [CustomActionFilter]
+        [AllowAnonymous]
         public ActionResult Info(string id)
         {
+           // throw new Exception("user exception");
+
             ViewData["Name"] = "Rama";
             ViewData["Email"] = "rama@gmail.com";
             ViewData["Date"] = DateTime.Now;

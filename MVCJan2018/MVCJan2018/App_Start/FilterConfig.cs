@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using MVCJan2018.Infrastrcture;
+using System.Web;
 using System.Web.Mvc;
 
 namespace MVCJan2018
@@ -7,6 +8,8 @@ namespace MVCJan2018
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            //filters.Add(new AuthorizeAttribute());
+            filters.Add(new CustomActionFilter());
             filters.Add(new HandleErrorAttribute());
         }
     }

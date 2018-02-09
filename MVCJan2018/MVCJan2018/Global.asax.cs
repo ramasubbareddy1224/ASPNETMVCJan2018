@@ -13,6 +13,7 @@ namespace MVCJan2018
         protected void Application_Start()
         {
             CustomRouteConfig.LoadRoutes(RouteTable.Routes);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 
             //AreaRegistration.RegisterAllAreas();
             //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
