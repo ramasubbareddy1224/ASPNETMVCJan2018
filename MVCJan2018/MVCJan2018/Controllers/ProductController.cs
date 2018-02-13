@@ -1,4 +1,6 @@
-﻿using MVCJan2018.Infrastrcture;
+﻿using BusinessService;
+using MVCJan2018.Infrastrcture;
+using MVCJan2018.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +9,14 @@ using System.Web.Mvc;
 
 namespace MVCJan2018.Controllers
 {
-   
+
     public class ProductController : Controller
     {
+        private EmployeeService _empService;
+        public ProductController()
+        {
+            _empService = new EmployeeService();
+        }
         public string Print()
         {
             return "Pragim Tech";
@@ -24,7 +31,7 @@ namespace MVCJan2018.Controllers
         [AllowAnonymous]
         public ActionResult Info(string id)
         {
-           // throw new Exception("user exception");
+            // throw new Exception("user exception");
 
             ViewData["Name"] = "Rama";
             ViewData["Email"] = "rama@gmail.com";
@@ -37,7 +44,7 @@ namespace MVCJan2018.Controllers
             if (id == "redirect")
             {
                 TempData["TDName"] = "Temp Data Name";
-               // return RedirectToAction("Info2");
+                // return RedirectToAction("Info2");
                 return RedirectToAction("Info2", "Product");
             }
 
@@ -57,7 +64,7 @@ namespace MVCJan2018.Controllers
             return Content("This is content type");
         }
 
-       
+
         public ActionResult RazorView()
         {
             return View();
@@ -68,6 +75,81 @@ namespace MVCJan2018.Controllers
         {
             return "XSDSDS-WQWQQ";
         }
+
+        public ActionResult Employee()
+        {
+            EmployeeVM empObj = new EmployeeVM
+            {
+                Id = 1,
+                Name = "Rama",
+                Email = "rama@gmail.com",
+                Address = "Hyd",
+                Department = new DepartmentVM { Id = 10, Name = "Computer" }
+            };
+            return View(empObj);
+        }
+        public ActionResult EmpDept()
+        {
+
+            EmployeeVM empObj = new EmployeeVM
+            {
+                Id = 1,
+                Name = "Rama",
+                Email = "rama@gmail.com",
+                Address = "Hyd",
+            };
+
+            DepartmentVM DeptObj = new DepartmentVM { Id = 10, Name = "Computer" };
+
+            EmployeeDeptVM MainObj = new EmployeeDeptVM()
+            {
+                Employee = empObj,
+                Department = DeptObj
+            };
+
+
+            //MainObj.Employee = empObj;
+            //MainObj.Department = DeptObj;
+
+            return View(MainObj);
+        }
+        public ActionResult EmployeeList()
+        {
+            List<EmployeeVM> empList = new List<EmployeeVM>();
+            EmployeeVM empObj = new EmployeeVM()
+            {
+                Id = 1,
+                Name = "Rama",
+                Email = "rama@gmail.com",
+                Address = "Hyd"
+            };
+            EmployeeVM empObj2 = new EmployeeVM()
+            {
+                Id = 2,
+                Name = "Siva",
+                Email = "siva@gmail.com",
+                Address = "Hyd"
+            };
+
+            empList.Add(empObj);
+            empList.Add(empObj2);
+
+            return View(empList);
+        }
+
+        public ActionResult json()
+        {
+            EmployeeVM empObj = new EmployeeVM()
+            {
+                Id = 1,
+                Name = "Rama",
+                Email = "rama@gmail.com",
+                Address = "Hyd"
+            };
+            return Json(empObj, JsonRequestBehavior.AllowGet);
+        }
+
+
         //public ActionResult ProductPartial()
         //{
         //    return PartialView();

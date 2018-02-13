@@ -127,6 +127,9 @@
     </Compile>
     <Compile Include="Infrastrcture\CustomActionFilter.cs" />
     <Compile Include="Infrastrcture\CustomHTMLHelper.cs" />
+    <Compile Include="Models\DepartmentVM.cs" />
+    <Compile Include="Models\EmployeeDeptVM.cs" />
+    <Compile Include="Models\EmployeeVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -175,9 +178,16 @@
     <Content Include="Views\Product\RazorView.cshtml" />
     <Content Include="Views\Shared\_ProductPartial.cshtml" />
     <Content Include="Views\Shared\_PartailData.cshtml" />
+    <Content Include="Views\Product\Employee.cshtml" />
+    <Content Include="Views\Product\EmployeeList.cshtml" />
+    <Content Include="Views\Product\EmpDept.cshtml" />
+    <Content Include="Views\Shared\_HomeLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <ProjectReference Include="..\BusinessService\BusinessService.csproj">
+      <Project>{4fbc445b-7312-4040-89ad-028d4500506d}</Project>
+      <Name>BusinessService</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
