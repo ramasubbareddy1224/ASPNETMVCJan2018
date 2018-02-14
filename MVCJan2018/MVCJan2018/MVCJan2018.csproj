@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CustomBundle.cs" />
     <Compile Include="App_Start\CustomRouteConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -130,6 +131,7 @@
     <Compile Include="Models\DepartmentVM.cs" />
     <Compile Include="Models\EmployeeDeptVM.cs" />
     <Compile Include="Models\EmployeeVM.cs" />
+    <Compile Include="Models\ProductVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +184,7 @@
     <Content Include="Views\Product\EmployeeList.cshtml" />
     <Content Include="Views\Product\EmpDept.cshtml" />
     <Content Include="Views\Shared\_HomeLayout.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessService\BusinessService.csproj">

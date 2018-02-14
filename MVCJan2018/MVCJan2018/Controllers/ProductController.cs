@@ -78,6 +78,7 @@ namespace MVCJan2018.Controllers
 
         public ActionResult Employee()
         {
+            ViewBag.Title = "Employee Title";
             EmployeeVM empObj = new EmployeeVM
             {
                 Id = 1,
@@ -90,7 +91,7 @@ namespace MVCJan2018.Controllers
         }
         public ActionResult EmpDept()
         {
-
+            ViewBag.Title = "Employee Dept Title";
             EmployeeVM empObj = new EmployeeVM
             {
                 Id = 1,
@@ -147,6 +148,22 @@ namespace MVCJan2018.Controllers
                 Address = "Hyd"
             };
             return Json(empObj, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(ProductVM product)
+        {
+            if(ModelState.IsValid)
+            {
+
+            }
+            return RedirectToAction("Employee");
         }
 
 

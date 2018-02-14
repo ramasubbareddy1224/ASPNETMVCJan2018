@@ -1,19 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Employee Data</title>
+    <title>@ViewBag.Title</title>
     <meta charset="utf-8" />
     <meta name="description" content="HTML Tutorials">
     <meta name="keywords" content="HTML,CSS">
     <meta name="author" content="Rama">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <noscript> JavaScript is not supported </noscript>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <script src="~/Scripts/bootstrap.min.js"></script>*@
+    @Styles.Render("~/bundle/style");
+
 </head>
 <body>
     <div><b>This is Layout with Header</b></div>
-    @RenderBody()
-    <div><b>This is Footer</b></div>
+    <div class="container body-content">
+        @RenderBody()
+        <div><b>This is Footer</b></div>
+    </div>
+
+    @Scripts.Render("~/bundle/script");
 </body>
 </html>
