@@ -8,7 +8,7 @@ namespace MVCJan2018
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            //filters.Add(new AuthorizeAttribute());
+            filters.Add(new AuthorizeAttribute());
             filters.Add(new CustomActionFilter());
             filters.Add(new HandleErrorAttribute());
         }

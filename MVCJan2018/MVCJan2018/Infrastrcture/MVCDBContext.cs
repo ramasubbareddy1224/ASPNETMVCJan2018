@@ -20,5 +20,6 @@ namespace MVCJan2018.Infrastrcture
         }
 
         public DbSet<Student> Student { get; set; }
+        public DbSet<Users> User { get; set; }
     }
 }

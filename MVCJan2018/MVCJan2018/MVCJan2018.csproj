@@ -129,6 +129,7 @@
     <Compile Include="App_Start\CustomBundle.cs" />
     <Compile Include="App_Start\CustomRouteConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\StudentDBController.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Models\EmployeeVM.cs" />
     <Compile Include="Models\ProductVM.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +201,7 @@
     <Content Include="Views\StudentDB\Index.cshtml" />
     <Content Include="Views\StudentDB\Create.cshtml" />
     <Content Include="Views\StudentDB\Edit.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessService\BusinessService.csproj">

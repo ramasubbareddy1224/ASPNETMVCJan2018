@@ -15,7 +15,9 @@ namespace MVCJan2018.Controllers
         // GET: StudentDB
         public ActionResult Index()
         {
-            List<Student> studentList = dbContext.Student.ToList();
+            Users UserData = (Users)Session["UserSession"];
+            //List<Student> studentList = dbContext.Student.ToList();
+            List<Student> studentList = dbContext.Student.Where(i => i.UserId == UserData.Id).ToList();
             return View(studentList);
         }
         public ActionResult Create()
